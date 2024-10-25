@@ -1,9 +1,5 @@
 // scripts.js
 
-// Import Three.js script (we’ll use a CDN for easy setup)
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/controls/OrbitControls.js';
-
 // Basic three.js setup
 const canvas = document.getElementById('glassesCanvas');
 const scene = new THREE.Scene();
@@ -12,7 +8,7 @@ const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
 // Set up controls for rotating, zooming, and panning
-const controls = new OrbitControls(camera, renderer.domElement);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true; // smooth controls
 controls.dampingFactor = 0.1;
 controls.enableZoom = true;
