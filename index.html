@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Glasses Customizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Toolbar at the top for customization options -->
+    <div class="toolbar">
+        <div class="dropdown">
+            <label for="rims">Rims:</label>
+            <select id="rims">
+                <option value="classic">Classic</option>
+                <option value="round">Round</option>
+                <option value="square">Square</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="bridge">Bridge:</label>
+            <select id="bridge">
+                <option value="narrow">Narrow</option>
+                <option value="medium">Medium</option>
+                <option value="wide">Wide</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="temples">Temples:</label>
+            <select id="temples">
+                <option value="standard">Standard</option>
+                <option value="curved">Curved</option>
+                <option value="slim">Slim</option>
+            </select>
+        </div>
+        <div class="dropdown">
+            <label for="color">Color:</label>
+            <select id="color">
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="black">Black</option>
+                <option value="carbon-fiber">Carbon Fiber</option>
+            </select>
+        </div>
+        <div class="slider">
+            <label for="templeLength">Temple Length:</label>
+            <input type="range" id="templeLength" min="120" max="150" value="135">
+        </div>
+    </div>
+
+    <!-- 3D viewer area -->
+    <div class="viewer">
+        <!-- The 3D canvas will be added here by JavaScript -->
+        <canvas id="glassesCanvas"></canvas>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
